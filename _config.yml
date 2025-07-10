@@ -7,7 +7,7 @@ first_name: Florian
 last_name: Bönsel
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
-description: PhD Student in Theoretical Physics at Max Planck Institute for the Science of Light. 
+description: PhD Student in Theoretical Physics at Max Planck Institute for the Science of Light.
   My research focuses on topological quantum physics, qauntum electrodynamics, and nonlinear systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -34,8 +34,6 @@ social:
     uri: https://mpl.mpg.de/research-at-mpl/independent-research-groups/kunst-research-group
   - name: Google Scholar
     uri: https://scholar.google.com/citations?user=HW_-RO4AAAAJ&hl=de # Go to your Scholar profile and copy the URL
-
-
 
 # -----------------------------------------------------------------------------
 # Theme
