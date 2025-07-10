@@ -2,14 +2,13 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+title: Florian Bönsel # the website title (if blank, full name will be used instead)
+first_name: Florian
+last_name: Bönsel
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: PhD Student in Theoretical Physics at Max Planck Institute for the Science of Light. 
+  My research focuses on topological quantum physics, qauntum electrodynamics, and nonlinear systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -18,11 +17,25 @@ keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your o
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
+url: https://florian-boensel.github.io # the base hostname & protocol for your site
 baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
+
+# -----------------------------------------------------------------------------
+# Social media profiles
+# -----------------------------------------------------------------------------
+
+social:
+  - name: MPL
+    # Don't put your email here directly to avoid spam. The theme will cleverly obfuscate it.
+    # Just put your user and domain, and the theme will build it.
+    uri: https://mpl.mpg.de/research-at-mpl/independent-research-groups/kunst-research-group
+  - name: Google Scholar
+    uri: https://scholar.google.com/citations?user=HW_-RO4AAAAJ&hl=de # Go to your Scholar profile and copy the URL
+
+
 
 # -----------------------------------------------------------------------------
 # Theme
