@@ -22,9 +22,7 @@ announcements:
 latest_posts:
   enabled: false
 ---
+
 Welcome! I am a PhD student in the research group of Flore Kunst at the Max Planck Institute for the Science of Light in Erlangen. My research focuses currently on waveguide QED and nonlinear systems.
 
 Feel free to browse my publications or get in touch!
-
-
-
