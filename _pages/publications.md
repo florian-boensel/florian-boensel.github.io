@@ -6,9 +6,7 @@ nav: true
 nav_order: 1
 ---
 
-{% include research_desk.liquid %}
-
-## Publication list
+<!-- Interactive "research desk" temporarily disabled; see _includes/research_desk.liquid -->
 
 <div class="publications">
 
