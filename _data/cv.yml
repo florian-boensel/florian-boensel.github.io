@@ -1,0 +1,148 @@
+cv:
+  name: Florian Bönsel
+  label: PhD Student in Theoretical Photonics
+  email: florian.boensel@mpl.mpg.de
+  location: Erlangen, Germany
+  image: ""
+  summary: >
+    Doctoral researcher in the Kunst Research Group at the Max Planck Institute for the
+    Science of Light. I work on theoretical photonics, plasmonics, and waveguide quantum
+    electrodynamics in fractal and curved-space geometries.
+
+  address:
+    street: Staudtstraße 2
+    city: Erlangen
+    region: Bavaria
+    postalCode: "91058"
+    countryCode: DE
+
+  sections:
+    Education:
+      - institution: Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)
+        location: Erlangen, Germany
+        area: Physics — Elite Graduate Program
+        studyType: M.Sc.
+        start_date: 2018
+        end_date: 2021
+        score: "1.15"
+        highlights:
+          - "Thesis: Control of noise-induced coherent oscillations in time-delayed neural motifs."
+
+      - institution: Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)
+        location: Erlangen, Germany
+        area: Physics — Elite Graduate Program
+        studyType: B.Sc.
+        start_date: 2016
+        end_date: 2019
+        score: "1.23"
+        highlights:
+          - "Thesis: Stimulated emission tomography in angular space on ultrathin sources of SPDC (Chekhova Group)."
+
+      - institution: Technische Hochschule Nürnberg
+        location: Nuremberg, Germany
+        area: Applied Mathematics and Physics
+        studyType: B.Sc. (partial)
+        start_date: 2014
+        end_date: 2016
+
+      - institution: Technische Hochschule Ingolstadt (with Airbus Group)
+        location: Ingolstadt, Germany
+        area: Aeronautic Engineering
+        studyType: B.Eng. (partial)
+        start_date: 2013
+        end_date: 2014
+
+    Experience:
+      - company: Max Planck Institute for the Science of Light — Kunst Research Group
+        position: Doctoral Researcher (IMPRS-PL)
+        location: Erlangen, Germany
+        start_date: 2024
+        end_date: present
+        summary: "Photonics and plasmonics in fractal and curved-space geometries."
+
+      - company: University of Ottawa
+        position: Visiting Researcher (collaboration with Prof. L. Ramunno)
+        location: Ottawa, Canada
+        start_date: 2026
+        end_date: 2026
+
+      - company: zollsoft GmbH
+        position: Software Developer
+        location: Jena, Germany
+        start_date: 2021
+        end_date: 2024
+        summary: "Cross-platform and server backend programming for medical data transfer."
+
+      - company: Friedrich-Alexander-Universität (Chair in Applied Analysis)
+        position: Guest Researcher
+        location: Erlangen, Germany
+        start_date: 2020
+        end_date: 2020
+
+      - company: Fraunhofer Institute IIS
+        position: Research Assistant
+        location: Nuremberg, Germany
+        start_date: 2018
+        end_date: 2021
+        highlights:
+          - "Numerical approaches for classifying metal objects by electromagnetic fingerprints."
+          - "Co-mentored a Bachelor student."
+
+      - company: Max Planck Institute for the Science of Light — Chekhova Group
+        position: Student Assistant
+        location: Erlangen, Germany
+        start_date: 2019
+        end_date: 2019
+        summary: "Built a microscopy setup for near-field detection of quantum light."
+
+      - company: Fraunhofer EZRT
+        position: Student Assistant
+        location: Fürth, Germany
+        start_date: 2015
+        end_date: 2016
+
+    Awards:
+      - title: Deutschlandstipendium
+        date: 2016
+        awarder: FAU Erlangen-Nürnberg
+        summary: National scholarship for high-achieving students (2016–2021).
+
+    Projects:
+      - name: Magnetic Resonance Imaging (Group of Prof. F. Laun, FAU)
+        summary: Quantitative susceptibility mapping with a 3D-printed MRI specimen holder.
+        start_date: 2019
+        end_date: 2020
+
+      - name: Gravitational Physics (Group of Prof. T. Thiemann, FAU)
+        summary: Probability of inflation from a quadratic inflaton field in loop quantum cosmology.
+        start_date: 2018
+        end_date: 2018
+
+      - name: Biophysics (Group of Prof. A.-S. Smith, FAU)
+        summary: Simulation of 2D tissue growth on a substrate.
+        start_date: 2017
+        end_date: 2018
+
+    Skills:
+      - name: Programming
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, Git, Dart/Flutter, Java, C++"
+
+      - name: Scientific Computing
+        level: Intermediate
+        icon: fa-solid fa-microchip
+        keywords: "COMSOL Multiphysics, CST Studio, numerical PDE methods"
+
+    Languages:
+      - name: German
+        summary: "Native speaker"
+      - name: English
+        summary: "Fluent"
+      - name: French / Swedish
+        summary: "Basic – intermediate"
+
+    Interests:
+      - name: Research
+        icon: fa-solid fa-atom
+        keywords: "Theoretical photonics, plasmonics, waveguide QED, aperiodic & fractal lattices, quantum optics"

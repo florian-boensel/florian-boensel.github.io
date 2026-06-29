@@ -1,0 +1,11 @@
+# Social + academic links shown in the footer and on the about page.
+# Order here = display order. Docs: https://github.com/george-gca/jekyll-socials
+
+email: florian.boensel@mpl.mpg.de
+linkedin_username: "florian-b%C3%B6nsel-216749273"   # -> linkedin.com/in/florian-bönsel-216749273
+scholar_userid: HW_-RO4AAAAJ                          # Google Scholar
+work_url: https://mpl.mpg.de/research-at-mpl/independent-research-groups/kunst-research-group  # Kunst Group @ MPL
+
+# --- Add these when ready (delete the leading "#"): ---
+# orcid_id: 0000-0000-0000-0000     # TODO: your ORCID
+# github_username: YOUR-USERNAME    # TODO

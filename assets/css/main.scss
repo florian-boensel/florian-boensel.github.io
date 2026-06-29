@@ -1,0 +1,62 @@
+---
+# Local override of the gem's assets/css/main.scss.
+# Reproduces the theme's @use manifest, then appends custom overrides at the end.
+---
+@charset "utf-8";
+
+/* Built-in Sass modules */
+@use "sass:math";
+@use "sass:string";
+
+/* Design tokens BEFORE partials (bridges site.max_width into the layout). */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default: "930px" }}
+);
+
+/* Theme partials (resolved from the al_folio_core gem's _sass). */
+@use "themes";
+@use "layout";
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* =========================================================================
+   Custom overrides — minimal academic look, blue accent
+   (inspired by robertavaltorta.com). Only token/rule tweaks below.
+   ========================================================================= */
+
+/* Swap al-folio's magenta accent for a clean academic blue. */
+:root {
+  --global-theme-color: #0a66c2;
+  --global-hover-color: #0a66c2;
+  --global-divider-color: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #6ab0ff;
+  --global-hover-color: #6ab0ff;
+  --global-divider-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Underline body links on hover (classic minimal academic), but leave
+   navbar and social-icon links untouched. */
+p a:hover,
+li a:hover,
+.profile a:hover,
+.publications a:hover {
+  text-decoration: underline;
+}
+
+/* Lighter horizontal dividers with more breathing room. */
+hr {
+  border: 0;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2rem 0;
+}

@@ -1,0 +1,345 @@
+{%- comment -%}
+  "My research desk" — illustrated, interactive. Each object is a research
+  project; hover shows a label, click opens its sub-page. Inline SVG + CSS.
+{%- endcomment -%}
+<div class="desk-wrap">
+  <p class="desk-hint">My research, on one desk — hover an object to see what it is, then click to open the project.</p>
+  <svg class="desk-svg" viewBox="0 0 1280 900" xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink" role="group"
+       aria-label="Interactive desk of research projects">
+    <defs>
+      <linearGradient id="dk-wood" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#d9af80"/><stop offset="100%" stop-color="#c6965d"/>
+      </linearGradient>
+      <radialGradient id="dk-metal" cx="36%" cy="30%" r="78%">
+        <stop offset="0%" stop-color="#f3f7fb"/><stop offset="45%" stop-color="#9fb1c4"/><stop offset="100%" stop-color="#3f4e62"/>
+      </radialGradient>
+      <radialGradient id="dk-metal2" cx="36%" cy="30%" r="78%">
+        <stop offset="0%" stop-color="#fbfcfd"/><stop offset="50%" stop-color="#aeb9c5"/><stop offset="100%" stop-color="#525d6c"/>
+      </radialGradient>
+      <radialGradient id="dk-gold" cx="38%" cy="32%" r="75%">
+        <stop offset="0%" stop-color="#ffe9a8"/><stop offset="55%" stop-color="#f0b94a"/><stop offset="100%" stop-color="#bd8226"/>
+      </radialGradient>
+      <radialGradient id="dk-bound" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffe27a" stop-opacity="0.95"/><stop offset="100%" stop-color="#ffe27a" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="dk-lamp" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="#fff3c4" stop-opacity="0.95"/><stop offset="100%" stop-color="#fff3c4" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="dk-cone" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#ff5d6c" stop-opacity="0.85"/><stop offset="100%" stop-color="#ff5d6c" stop-opacity="0.12"/>
+      </linearGradient>
+      <radialGradient id="dk-emit" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#7fd0ff"/><stop offset="100%" stop-color="#3b86d6"/>
+      </radialGradient>
+      <filter id="dk-glow" x="-70%" y="-70%" width="240%" height="240%">
+        <feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!-- background + desk -->
+    <rect x="0" y="0" width="1280" height="900" fill="#f4ecdf"/>
+    <rect x="28" y="54" width="1224" height="818" rx="28" fill="url(#dk-wood)"/>
+    <rect x="28" y="54" width="1224" height="818" rx="28" fill="none" stroke="#a9764a" stroke-opacity="0.35" stroke-width="2"/>
+    <g stroke="#b9824f" stroke-opacity="0.26" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M60 210 q320 -14 620 0 t560 6"/><path d="M60 470 q300 14 600 2 t600 -8"/><path d="M60 720 q320 -12 620 2 t560 4"/>
+    </g>
+
+    <!-- ===================== AMBIANCE ===================== -->
+    <g><!-- lamp, top-left -->
+      <ellipse cx="150" cy="250" rx="40" ry="13" fill="#3b4654"/>
+      <rect x="145" y="120" width="10" height="132" rx="5" fill="#566373"/>
+      <rect x="150" y="104" width="104" height="10" rx="5" fill="#566373" transform="rotate(30 150 109)"/>
+      <path d="M226 120 l50 30 l-26 28 l-44 -34 z" fill="#3b4654"/>
+      <ellipse cx="242" cy="170" rx="34" ry="16" fill="url(#dk-lamp)"/>
+      <circle cx="242" cy="158" r="8" fill="#ffe9a8"/>
+    </g>
+    <g><!-- plant, top-right -->
+      <ellipse cx="1168" cy="250" rx="40" ry="12" fill="#3a2a17" opacity="0.14"/>
+      <path d="M1168 196 q-38 -6 -44 -54 q34 8 44 54 z" fill="#5aa264"/>
+      <path d="M1168 196 q40 -8 48 -58 q-38 10 -48 58 z" fill="#4c9457"/>
+      <path d="M1168 200 q-8 -44 4 -78 q16 34 -4 78 z" fill="#69b673"/>
+      <path d="M1142 206 h52 l-8 46 h-36 z" fill="#c9714c"/>
+      <rect x="1136" y="198" width="64" height="14" rx="4" fill="#d77f57"/>
+    </g>
+    <g><!-- coffee mug, mid-right -->
+      <ellipse cx="1180" cy="556" rx="36" ry="11" fill="#3a2a17" opacity="0.14"/>
+      <path d="M1168 500 q14 -10 28 0 a6 6 0 0 1 10 6 q-8 8 -16 3 z" fill="none" stroke="#e7e2da" stroke-width="8"/>
+      <rect x="1150" y="506" width="54" height="50" rx="9" fill="#eef0f2"/>
+      <ellipse cx="1177" cy="508" rx="27" ry="7" fill="#7c5a3e"/>
+      <path d="M1170 488 q-5 -10 3 -18 M1184 488 q-5 -10 3 -18" fill="none" stroke="#cdbfae" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+    <g transform="rotate(-22 520 856)"><!-- pen -->
+      <rect x="450" y="849" width="120" height="13" rx="6" fill="#3f7fd0"/>
+      <path d="M570 849 l20 6.5 l-20 6.5 z" fill="#f4d06b"/>
+      <rect x="446" y="849" width="12" height="13" rx="3" fill="#2b5fa6"/>
+    </g>
+
+    <!-- ===================== PROJECT OBJECTS ===================== -->
+
+    <!-- 1) EPR / SPDC optics bench -->
+    <a class="desk-item" href="{{ '/projects/epr-states/' | relative_url }}" xlink:href="{{ '/projects/epr-states/' | relative_url }}">
+      <title>Idealized EPR States from Parametric Down-Conversion (Phys. Rev. A, 2020)</title>
+      <g transform="translate(250,430)">
+        <ellipse class="desk-shadow" cx="0" cy="96" rx="150" ry="22"/>
+        <g class="desk-art">
+          <!-- breadboard (isometric slab) -->
+          <polygon points="-135,58 120,58 152,84 -103,84" fill="#26344a"/>
+          <polygon points="-135,58 -103,84 -103,96 -135,70" fill="#1a2636"/>
+          <polygon points="-103,84 152,84 152,96 -103,96" fill="#1d2a3d"/>
+          <g fill="#39496180"><circle cx="-96" cy="72" r="2.4"/><circle cx="-64" cy="72" r="2.4"/><circle cx="-32" cy="72" r="2.4"/><circle cx="0" cy="72" r="2.4"/><circle cx="32" cy="72" r="2.4"/><circle cx="64" cy="72" r="2.4"/><circle cx="96" cy="72" r="2.4"/><circle cx="-80" cy="64" r="2.4"/><circle cx="-16" cy="64" r="2.4"/><circle cx="48" cy="64" r="2.4"/><circle cx="112" cy="64" r="2.4"/></g>
+          <!-- posts -->
+          <g fill="#7a869a"><rect x="-118" y="20" width="9" height="46" rx="3"/><rect x="-40" y="26" width="8" height="40" rx="3"/><rect x="6" y="22" width="8" height="44" rx="3"/></g>
+          <!-- pump laser -->
+          <rect x="-150" y="-2" width="54" height="28" rx="6" fill="#39434f"/>
+          <rect x="-150" y="-2" width="54" height="9" rx="4" fill="#4d5866"/>
+          <circle cx="-98" cy="12" r="5" fill="#9b7cff"/>
+          <!-- pump beam (violet) -->
+          <rect x="-93" y="9" width="78" height="6" rx="3" fill="#8a63ff" filter="url(#dk-glow)" opacity="0.9"/>
+          <!-- lens -->
+          <ellipse cx="-36" cy="12" rx="7" ry="22" fill="#bfe9ff" fill-opacity="0.65" stroke="#5bb6e0" stroke-width="2"/>
+          <!-- nonlinear crystal -->
+          <rect x="2" y="-8" width="18" height="40" rx="3" fill="#ffd27f" fill-opacity="0.9" stroke="#d79a36" stroke-width="2"/>
+          <!-- SPDC cones (signal/idler) -->
+          <polygon points="20,12 150,-30 150,-6" fill="url(#dk-cone)"/>
+          <polygon points="20,12 150,54 150,30" fill="url(#dk-cone)"/>
+          <line x1="20" y1="12" x2="150" y2="-30" stroke="#ff5d6c" stroke-width="2"/>
+          <line x1="20" y1="12" x2="150" y2="54" stroke="#ff5d6c" stroke-width="2"/>
+          <!-- entangled photons -->
+          <circle cx="92" cy="-3" r="5" fill="#ffe680" filter="url(#dk-glow)"/>
+          <circle cx="92" cy="27" r="5" fill="#ffe680" filter="url(#dk-glow)"/>
+          <path d="M92 -3 Q120 12 92 27" fill="none" stroke="#ffe680" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8"/>
+          <!-- detectors -->
+          <g fill="#4a5670"><rect x="150" y="-44" width="34" height="26" rx="5"/><rect x="150" y="40" width="34" height="26" rx="5"/></g>
+          <circle cx="150" cy="-31" r="6" fill="#222b3a"/><circle cx="150" cy="53" r="6" fill="#222b3a"/>
+          <!-- coincidence box -->
+          <rect x="150" y="-2" width="30" height="30" rx="4" fill="#5a6478"/>
+          <text x="165" y="18" font-size="16" fill="#ffe680" text-anchor="middle" font-family="monospace">&amp;</text>
+        </g>
+        <g class="desk-tip" transform="translate(0,-90)">
+          <rect class="tip-box" x="-108" y="-19" width="216" height="32" rx="9"/><text class="tip-text" x="0" y="2">EPR Entanglement · 2020</text>
+        </g>
+      </g>
+    </a>
+
+    <!-- 2) Fractal photonic lattice (Sierpinski gasket + bound-state emitter) -->
+    <a class="desk-item" href="{{ '/projects/fractal-photonic-lattices/' | relative_url }}" xlink:href="{{ '/projects/fractal-photonic-lattices/' | relative_url }}">
+      <title>Atom-Photon Bound States in Fractal Photonic Lattices (arXiv, 2026)</title>
+      <g transform="translate(548,438)">
+        <ellipse class="desk-shadow" cx="0" cy="92" rx="118" ry="20"/>
+        <g class="desk-art">
+          <!-- bound-state halo behind emitter -->
+          <circle cx="0" cy="-120" r="60" fill="url(#dk-bound)"/>
+          <!-- Sierpinski gasket (level 3) -->
+          <g fill="#2bb3a3" stroke="#1d8f81" stroke-width="0.8">
+            <polygon points="0.0,-120.0 -13.8,-96.2 13.8,-96.2"/><polygon points="-13.8,-96.2 -27.5,-72.5 0.0,-72.5"/><polygon points="13.8,-96.2 0.0,-72.5 27.5,-72.5"/><polygon points="-27.5,-72.5 -41.2,-48.8 -13.8,-48.8"/><polygon points="-41.2,-48.8 -55.0,-25.0 -27.5,-25.0"/><polygon points="-13.8,-48.8 -27.5,-25.0 0.0,-25.0"/><polygon points="27.5,-72.5 13.8,-48.8 41.2,-48.8"/><polygon points="13.8,-48.8 0.0,-25.0 27.5,-25.0"/><polygon points="41.2,-48.8 27.5,-25.0 55.0,-25.0"/><polygon points="-55.0,-25.0 -68.8,-1.2 -41.2,-1.2"/><polygon points="-68.8,-1.2 -82.5,22.5 -55.0,22.5"/><polygon points="-41.2,-1.2 -55.0,22.5 -27.5,22.5"/><polygon points="-82.5,22.5 -96.2,46.2 -68.8,46.2"/><polygon points="-96.2,46.2 -110.0,70.0 -82.5,70.0"/><polygon points="-68.8,46.2 -82.5,70.0 -55.0,70.0"/><polygon points="-27.5,22.5 -41.2,46.2 -13.8,46.2"/><polygon points="-41.2,46.2 -55.0,70.0 -27.5,70.0"/><polygon points="-13.8,46.2 -27.5,70.0 0.0,70.0"/><polygon points="55.0,-25.0 41.2,-1.2 68.8,-1.2"/><polygon points="41.2,-1.2 27.5,22.5 55.0,22.5"/><polygon points="68.8,-1.2 55.0,22.5 82.5,22.5"/><polygon points="27.5,22.5 13.8,46.2 41.2,46.2"/><polygon points="13.8,46.2 0.0,70.0 27.5,70.0"/><polygon points="41.2,46.2 27.5,70.0 55.0,70.0"/><polygon points="82.5,22.5 68.8,46.2 96.2,46.2"/><polygon points="68.8,46.2 55.0,70.0 82.5,70.0"/><polygon points="96.2,46.2 82.5,70.0 110.0,70.0"/>
+          </g>
+          <!-- emitter (atom) at apex with bound state -->
+          <circle cx="0" cy="-120" r="9" fill="#ffd34d" filter="url(#dk-glow)"/>
+          <circle cx="0" cy="-120" r="4" fill="#fff6d8"/>
+          <!-- decaying bound-state amplitude along the lattice -->
+          <g fill="#ffd34d"><circle cx="-13.8" cy="-96.2" r="4" opacity="0.7"/><circle cx="13.8" cy="-96.2" r="4" opacity="0.7"/><circle cx="-27.5" cy="-72.5" r="3" opacity="0.45"/><circle cx="27.5" cy="-72.5" r="3" opacity="0.45"/><circle cx="0" cy="-72.5" r="3" opacity="0.5"/></g>
+        </g>
+        <g class="desk-tip" transform="translate(0,-188)">
+          <rect class="tip-box" x="-96" y="-19" width="192" height="32" rx="9"/><text class="tip-text" x="0" y="2">Fractal Lattices · 2026</text>
+        </g>
+      </g>
+    </a>
+
+    <!-- 3) Curved plasmonics (metallic spheroid + emitter ring + SPP waves) -->
+    <a class="desk-item" href="{{ '/projects/curved-plasmonics/' | relative_url }}" xlink:href="{{ '/projects/curved-plasmonics/' | relative_url }}">
+      <title>Surface Plasmon Polaritons on Curved Interfaces (arXiv, 2026)</title>
+      <g transform="translate(828,432)">
+        <ellipse class="desk-shadow" cx="0" cy="96" rx="96" ry="18"/>
+        <g class="desk-art">
+          <!-- pedestal -->
+          <ellipse cx="0" cy="74" rx="46" ry="11" fill="#7c6a52"/>
+          <rect x="-10" y="58" width="20" height="20" rx="3" fill="#8b7659"/>
+          <!-- spheroid -->
+          <ellipse cx="0" cy="0" rx="68" ry="64" fill="url(#dk-metal)"/>
+          <ellipse cx="-24" cy="-26" rx="18" ry="11" fill="#ffffff" fill-opacity="0.55"/>
+          <!-- surface plasmon wavefronts hugging the curve -->
+          <g fill="none" stroke="#39c0e0" stroke-width="2.4" stroke-linecap="round" filter="url(#dk-glow)">
+            <path d="M-62 -16 q62 40 124 0" opacity="0.95"/>
+            <path d="M-54 2 q54 34 108 0" opacity="0.8"/>
+            <path d="M-44 18 q44 26 88 0" opacity="0.6"/>
+          </g>
+          <!-- geodesic hint -->
+          <path d="M-60 -8 q60 -44 120 0" fill="none" stroke="#cfe9f4" stroke-width="1.4" stroke-dasharray="4 4" opacity="0.7"/>
+          <!-- ring of emitters (super/subradiant) -->
+          <g>
+            <circle cx="0" cy="-64" r="6" fill="#ff7ea8" filter="url(#dk-glow)"/>
+            <circle cx="48" cy="-44" r="6" fill="#ff7ea8" opacity="0.55"/>
+            <circle cx="66" cy="0" r="6" fill="#ff7ea8" filter="url(#dk-glow)"/>
+            <circle cx="48" cy="44" r="6" fill="#ff7ea8" opacity="0.5"/>
+            <circle cx="-48" cy="44" r="6" fill="#ff7ea8" filter="url(#dk-glow)"/>
+            <circle cx="-66" cy="0" r="6" fill="#ff7ea8" opacity="0.55"/>
+            <circle cx="-48" cy="-44" r="6" fill="#ff7ea8" filter="url(#dk-glow)"/>
+          </g>
+        </g>
+        <g class="desk-tip" transform="translate(0,-118)">
+          <rect class="tip-box" x="-108" y="-19" width="216" height="32" rx="9"/><text class="tip-text" x="0" y="2">Curved Plasmonics · 2026</text>
+        </g>
+      </g>
+    </a>
+
+    <!-- 4) Fibonacci waveguide QED (aperiodic chain + tiling + emitters) -->
+    <a class="desk-item" href="{{ '/projects/fibonacci-waveguide-qed/' | relative_url }}" xlink:href="{{ '/projects/fibonacci-waveguide-qed/' | relative_url }}">
+      <title>Fibonacci Waveguide Quantum Electrodynamics (Quantum, 2026)</title>
+      <g transform="translate(1076,446)">
+        <ellipse class="desk-shadow" cx="0" cy="92" rx="150" ry="20"/>
+        <g class="desk-art">
+          <!-- waveguide rail -->
+          <rect x="-138" y="6" width="276" height="14" rx="7" fill="#2bb3a3"/>
+          <rect x="-138" y="6" width="276" height="5" rx="2.5" fill="#49d6c7"/>
+          <!-- coupling links + resonator nodes (Fibonacci spacing) -->
+          <g fill="url(#dk-gold)" stroke="#bd8226" stroke-width="1">
+            <circle cx="-130" cy="13" r="6"/><circle cx="-106.5" cy="13" r="6"/><circle cx="-92.1" cy="13" r="6"/><circle cx="-68.6" cy="13" r="6"/><circle cx="-45.1" cy="13" r="6"/><circle cx="-30.7" cy="13" r="6"/><circle cx="-7.2" cy="13" r="6"/><circle cx="7.2" cy="13" r="6"/><circle cx="30.7" cy="13" r="6"/><circle cx="54.2" cy="13" r="6"/><circle cx="68.6" cy="13" r="6"/><circle cx="92.1" cy="13" r="6"/><circle cx="115.6" cy="13" r="6"/><circle cx="130" cy="13" r="6"/>
+          </g>
+          <!-- Fibonacci tiling strip (long=teal, short=gold) -->
+          <g>
+            <rect x="-130" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="-106.5" y="34" width="14.4" height="12" fill="#f0b94a"/><rect x="-92.1" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="-68.6" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="-45.1" y="34" width="14.4" height="12" fill="#f0b94a"/><rect x="-30.7" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="-7.2" y="34" width="14.4" height="12" fill="#f0b94a"/><rect x="7.2" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="30.7" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="54.2" y="34" width="14.4" height="12" fill="#f0b94a"/><rect x="68.6" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="92.1" y="34" width="23.5" height="12" fill="#2bb3a3"/><rect x="115.6" y="34" width="14.4" height="12" fill="#f0b94a"/>
+          </g>
+          <!-- two coupled emitters with bound-state clouds -->
+          <circle cx="-68.6" cy="-46" r="46" fill="url(#dk-bound)"/>
+          <circle cx="54.2" cy="-46" r="46" fill="url(#dk-bound)"/>
+          <line x1="-68.6" y1="-30" x2="-68.6" y2="9" stroke="#6aa8ff" stroke-width="2.5"/>
+          <line x1="54.2" y1="-30" x2="54.2" y2="9" stroke="#6aa8ff" stroke-width="2.5"/>
+          <circle cx="-68.6" cy="-40" r="13" fill="url(#dk-emit)" filter="url(#dk-glow)"/>
+          <circle cx="54.2" cy="-40" r="13" fill="url(#dk-emit)" filter="url(#dk-glow)"/>
+          <circle cx="-72" cy="-44" r="4" fill="#dff1ff"/><circle cx="50.8" cy="-44" r="4" fill="#dff1ff"/>
+        </g>
+        <g class="desk-tip" transform="translate(0,-118)">
+          <rect class="tip-box" x="-116" y="-19" width="232" height="32" rx="9"/><text class="tip-text" x="0" y="2">Fibonacci Waveguide · 2026</text>
+        </g>
+      </g>
+    </a>
+
+    <!-- 5) Neural motifs (three neurons + oscillation + noise) -->
+    <a class="desk-item" href="{{ '/projects/neural-motifs/' | relative_url }}" xlink:href="{{ '/projects/neural-motifs/' | relative_url }}">
+      <title>Control of Noise-Induced Coherent Oscillations in Three-Neuron Motifs (Cognitive Neurodynamics, 2021)</title>
+      <g transform="translate(322,772)">
+        <ellipse class="desk-shadow" cx="0" cy="92" rx="130" ry="20"/>
+        <g class="desk-art">
+          <!-- connections (axons) between the 3 somata -->
+          <g fill="none" stroke="#b07fc7" stroke-width="3" stroke-linecap="round">
+            <path d="M-66 -36 q60 -20 118 14"/><path d="M52 -22 q-8 60 -92 56"/><path d="M-40 34 q-30 -40 -22 -64"/>
+          </g>
+          <!-- synapse arrowheads -->
+          <g fill="#8e5ea8"><path d="M52 -22 l-12 -3 l6 12 z"/><path d="M-40 34 l11 -5 l1 13 z"/><path d="M-58 -30 l13 2 l-7 11 z"/></g>
+          <!-- neuron glyph helper (soma + dendrites) -->
+          <g stroke="#d36fa6" stroke-width="2.5" stroke-linecap="round">
+            <g transform="translate(-66,-36)"><line x1="0" y1="0" x2="-20" y2="-12"/><line x1="0" y1="0" x2="-22" y2="6"/><line x1="0" y1="0" x2="-12" y2="-22"/></g>
+            <g transform="translate(60,-22)"><line x1="0" y1="0" x2="20" y2="-14"/><line x1="0" y1="0" x2="24" y2="4"/><line x1="0" y1="0" x2="12" y2="-22"/></g>
+            <g transform="translate(-40,40)"><line x1="0" y1="0" x2="-18" y2="16"/><line x1="0" y1="0" x2="6" y2="24"/><line x1="0" y1="0" x2="-22" y2="2"/></g>
+          </g>
+          <g><circle cx="-66" cy="-36" r="15" fill="#ff86c2"/><circle cx="60" cy="-22" r="15" fill="#ff86c2"/><circle cx="-40" cy="40" r="15" fill="#ff86c2"/>
+             <circle cx="-66" cy="-36" r="6" fill="#c33b80"/><circle cx="60" cy="-22" r="6" fill="#c33b80"/><circle cx="-40" cy="40" r="6" fill="#c33b80"/></g>
+          <!-- coherent oscillation waveform + noise -->
+          <path d="M-10 70 q12 -22 24 0 t24 0 t24 0" fill="none" stroke="#3f7fd0" stroke-width="2.5"/>
+          <path d="M-12 84 l4 -6 l3 9 l4 -10 l3 7 l4 -5 l3 6" fill="none" stroke="#9aa6b6" stroke-width="1.6"/>
+        </g>
+        <g class="desk-tip" transform="translate(0,-92)">
+          <rect class="tip-box" x="-92" y="-19" width="184" height="32" rx="9"/><text class="tip-text" x="0" y="2">Neural Motifs · 2021</text>
+        </g>
+      </g>
+    </a>
+
+    <!-- 6) Metal spheres in an oscillating magnetic field -->
+    <a class="desk-item" href="{{ '/projects/metal-spheres/' | relative_url }}" xlink:href="{{ '/projects/metal-spheres/' | relative_url }}">
+      <title>Multiple Metal Spheres in Oscillating Magnetic Fields (IEEE Transactions on Magnetics, 2022)</title>
+      <g transform="translate(652,778)">
+        <ellipse class="desk-shadow" cx="0" cy="90" rx="128" ry="20"/>
+        <g class="desk-art">
+          <!-- magnetic field loops -->
+          <g fill="none" stroke="#f0a93a" stroke-width="2.6">
+            <ellipse cx="0" cy="6" rx="120" ry="56" opacity="0.85"/><ellipse cx="0" cy="6" rx="92" ry="40" opacity="0.7"/><ellipse cx="0" cy="6" rx="64" ry="26" opacity="0.55"/>
+          </g>
+          <path d="M118 -8 l10 6 l-4 11" fill="none" stroke="#f0a93a" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M-118 20 l-10 -6 l4 -11" fill="none" stroke="#f0a93a" stroke-width="2.6" stroke-linecap="round"/>
+          <!-- solenoid coil at left -->
+          <g stroke="#c97a3c" stroke-width="6" fill="none" stroke-linecap="round">
+            <ellipse cx="-86" cy="6" rx="9" ry="22"/><ellipse cx="-74" cy="6" rx="9" ry="22"/><ellipse cx="-62" cy="6" rx="9" ry="22"/>
+          </g>
+          <!-- AC source -->
+          <circle cx="-110" cy="48" r="13" fill="#fff3e2" stroke="#c97a3c" stroke-width="2.5"/>
+          <path d="M-117 48 q3.5 -7 7 0 t7 0" fill="none" stroke="#c97a3c" stroke-width="2"/>
+          <line x1="-100" y1="44" x2="-90" y2="20" stroke="#c97a3c" stroke-width="2.5"/>
+          <!-- metal spheres with induced dipole arrows -->
+          <ellipse cx="0" cy="34" rx="26" ry="7" fill="#7c6a52"/><ellipse cx="52" cy="36" rx="22" ry="6" fill="#7c6a52"/>
+          <circle cx="0" cy="6" r="28" fill="url(#dk-metal2)"/>
+          <circle cx="54" cy="12" r="22" fill="url(#dk-metal)"/>
+          <ellipse cx="-9" cy="-4" rx="8" ry="5" fill="#fff" fill-opacity="0.5"/>
+          <g stroke="#d34f4f" stroke-width="2.5" stroke-linecap="round"><line x1="0" y1="18" x2="0" y2="-6"/><line x1="54" y1="22" x2="54" y2="4"/></g>
+          <g fill="#d34f4f"><path d="M0 -10 l-4 7 l8 0 z"/><path d="M54 0 l-3 6 l6 0 z"/></g>
+        </g>
+        <g class="desk-tip" transform="translate(0,-92)">
+          <rect class="tip-box" x="-94" y="-19" width="188" height="32" rx="9"/><text class="tip-text" x="0" y="2">Metal Spheres · 2022</text>
+        </g>
+      </g>
+    </a>
+
+    <!-- 7) Studies — books + grad cap + field emblems -->
+    <a class="desk-item" href="{{ '/projects/studies/' | relative_url }}" xlink:href="{{ '/projects/studies/' | relative_url }}">
+      <title>Research projects during my studies — MRI, gravitational physics, biophysics</title>
+      <g transform="translate(978,772)">
+        <ellipse class="desk-shadow" cx="0" cy="90" rx="128" ry="20"/>
+        <g class="desk-art">
+          <!-- book stack -->
+          <g>
+            <rect x="-70" y="40" width="150" height="22" rx="4" fill="#5b8db0"/><rect x="-62" y="40" width="10" height="22" fill="#3f6f90"/>
+            <rect x="-78" y="20" width="140" height="22" rx="4" fill="#6fae6f"/><rect x="-70" y="20" width="10" height="22" fill="#4f8d4f"/>
+            <rect x="-60" y="0" width="134" height="22" rx="4" fill="#e0954a"/><rect x="-52" y="0" width="10" height="22" fill="#c2762f"/>
+          </g>
+          <!-- field emblem cards leaning on the books -->
+          <!-- MRI: head + brain -->
+          <g transform="translate(-44,-30)"><rect x="-22" y="-22" width="44" height="44" rx="6" fill="#fbf6ea" stroke="#c9b89a" stroke-width="2"/><circle cx="0" cy="2" r="13" fill="none" stroke="#c33b80" stroke-width="2.4"/><path d="M-8 2 q4 -8 8 0 t8 0 M-8 8 q5 6 8 0 t8 0" fill="none" stroke="#c33b80" stroke-width="2"/></g>
+          <!-- gravity: spacetime well -->
+          <g transform="translate(4,-36)"><rect x="-22" y="-22" width="44" height="44" rx="6" fill="#fbf6ea" stroke="#c9b89a" stroke-width="2"/><g fill="none" stroke="#3f7fd0" stroke-width="1.6"><ellipse cx="0" cy="2" rx="16" ry="6"/><ellipse cx="0" cy="2" rx="10" ry="9"/><path d="M-16 -2 q16 16 32 0 M-12 -8 q12 22 24 0"/></g><circle cx="0" cy="6" r="4" fill="#2b2018"/></g>
+          <!-- biophysics: cells -->
+          <g transform="translate(52,-26)"><rect x="-22" y="-22" width="44" height="44" rx="6" fill="#fbf6ea" stroke="#c9b89a" stroke-width="2"/><g fill="#a9d6a0" stroke="#5aa264" stroke-width="1.6"><circle cx="-6" cy="-4" r="9"/><circle cx="8" cy="6" r="8"/></g><circle cx="-6" cy="-4" r="3" fill="#3c7a47"/><circle cx="8" cy="6" r="3" fill="#3c7a47"/></g>
+          <!-- graduation cap on top -->
+          <g transform="translate(8,-66)">
+            <polygon points="-34,0 0,-16 34,0 0,16" fill="#2b2f3a"/>
+            <path d="M-16 6 v16 q16 12 32 0 v-16" fill="#3a4250"/>
+            <line x1="34" y1="0" x2="40" y2="22" stroke="#f0b94a" stroke-width="2"/><circle cx="40" cy="24" r="4" fill="#f0b94a"/>
+          </g>
+        </g>
+        <g class="desk-tip" transform="translate(0,-104)">
+          <rect class="tip-box" x="-98" y="-19" width="196" height="32" rx="9"/><text class="tip-text" x="0" y="2">MSc &amp; BSc Projects</text>
+        </g>
+      </g>
+    </a>
+  </svg>
+
+  <nav class="desk-jump" aria-label="Projects list">
+    <a href="{{ '/projects/epr-states/' | relative_url }}">EPR Entanglement</a>
+    <a href="{{ '/projects/fractal-photonic-lattices/' | relative_url }}">Fractal Lattices</a>
+    <a href="{{ '/projects/curved-plasmonics/' | relative_url }}">Curved Plasmonics</a>
+    <a href="{{ '/projects/fibonacci-waveguide-qed/' | relative_url }}">Fibonacci Waveguide</a>
+    <a href="{{ '/projects/neural-motifs/' | relative_url }}">Neural Motifs</a>
+    <a href="{{ '/projects/metal-spheres/' | relative_url }}">Metal Spheres</a>
+    <a href="{{ '/projects/studies/' | relative_url }}">MSc &amp; BSc Projects</a>
+  </nav>
+</div>
+
+<style>
+  .desk-wrap { position: relative; left: 50%; transform: translateX(-50%);
+    width: min(1120px, 95vw); margin: 1.4rem 0 0.6rem; }
+  .desk-svg { width: 100%; height: auto; display: block; border-radius: 20px; }
+  .desk-hint { text-align: center; font-size: 0.9rem; opacity: 0.72; margin: 0.2rem 0 0.5rem; }
+  .desk-item { cursor: pointer; }
+  .desk-art { transition: transform 0.2s ease; }
+  .desk-item:hover .desk-art, .desk-item:focus .desk-art { transform: translateY(-11px); }
+  .desk-shadow { fill: #3a2a17; opacity: 0.15;
+    transition: transform 0.2s ease, opacity 0.2s ease; transform-box: fill-box; transform-origin: center; }
+  .desk-item:hover .desk-shadow, .desk-item:focus .desk-shadow { transform: scale(1.1); opacity: 0.22; }
+  .desk-tip { opacity: 0; transition: opacity 0.18s ease; pointer-events: none; }
+  .desk-item:hover .desk-tip, .desk-item:focus .desk-tip { opacity: 1; }
+  .tip-box { fill: #2b2018; }
+  .tip-text { fill: #ffffff; font-size: 15px; font-weight: 600; text-anchor: middle; font-family: inherit; }
+  .desk-item:focus { outline: none; }
+  .desk-jump { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center;
+    font-size: 0.85rem; margin-top: 0.6rem; }
+  @media (prefers-reduced-motion: reduce) { .desk-art, .desk-shadow, .desk-tip { transition: none; } }
+</style>

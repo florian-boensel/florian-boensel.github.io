@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Build the site (production) and publish it to the gh-pages branch.
+# Usage: ./bin/deploy
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LANG="${LANG:-en_US.UTF-8}"
+export LC_ALL="${LC_ALL:-en_US.UTF-8}"
+export JEKYLL_ENV=production
+
+REPO_URL="$(git config --get remote.origin.url)"
+if [ -z "$REPO_URL" ]; then echo "No 'origin' remote set."; exit 1; fi
+
+echo "→ Building site (production)…"
+rm -rf _site
+bundle exec jekyll build
+
+echo "→ Publishing to gh-pages…"
+cd _site
+touch .nojekyll                      # serve the prebuilt files as-is
+git init -q
+git checkout -q -b gh-pages
+git add -A
+git -c user.email="florian.boensel@gmail.com" -c user.name="Florian Bönsel" \
+    commit -qm "Deploy site ($(date -u +%Y-%m-%dT%H:%MZ))"
+git push -f -q "$REPO_URL" gh-pages
+cd ..
+rm -rf _site/.git
+
+echo "✓ Deployed. Live at https://florian-boensel.github.io (allow a minute on first publish)."
