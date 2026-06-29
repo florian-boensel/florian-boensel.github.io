@@ -60,12 +60,6 @@ cv:
         end_date: present
         summary: "Photonics and plasmonics in fractal and curved-space geometries."
 
-      - company: University of Ottawa
-        position: Visiting Researcher (collaboration with Prof. L. Ramunno)
-        location: Ottawa, Canada
-        start_date: 2026
-        end_date: 2026
-
       - company: zollsoft GmbH
         position: Software Developer
         location: Jena, Germany
@@ -86,7 +80,6 @@ cv:
         end_date: 2021
         highlights:
           - "Numerical approaches for classifying metal objects by electromagnetic fingerprints."
-          - "Co-mentored a Bachelor student."
 
       - company: Max Planck Institute for the Science of Light — Chekhova Group
         position: Student Assistant
