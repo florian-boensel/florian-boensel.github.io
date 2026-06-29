@@ -24,7 +24,7 @@ git checkout -q -b gh-pages
 git add -A
 git -c user.email="florian.boensel@gmail.com" -c user.name="Florian Bönsel" \
     commit -qm "Deploy site ($(date -u +%Y-%m-%dT%H:%MZ))"
-git push -f -q "$REPO_URL" gh-pages
+git -c http.version=HTTP/1.1 -c http.postBuffer=524288000 push -f -q "$REPO_URL" gh-pages
 cd ..
 rm -rf _site/.git
 
